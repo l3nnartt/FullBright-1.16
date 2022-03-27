@@ -1,6 +1,5 @@
 {
-  "name": "Example Addon",
+  "name": "Fullbright",
   "uuid": "%uuid%",
-  "mainClass": "com.example.addon.ExampleAddon",
-  "transformerClass": "com.example.addon.ExampleAddonTransformer"
+  "mainClass": "com.github.l3nnartt.fullbright.FullBright"
 }
