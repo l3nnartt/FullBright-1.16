@@ -1,5 +1,10 @@
 {
-  "name": "Fullbright",
   "uuid": "%uuid%",
-  "mainClass": "com.github.l3nnartt.fullbright.FullBright"
+  "name": "Full Bright",
+  "mainClass": "com.github.l3nnartt.fullbright.FullBright",
+  "description": "Allows you to change the brightness of the game to full bright",
+  "version": 1,
+  "author": "L3nnart_",
+  "category": 4,
+  "icon": "https://dl.lennartloesche.de/fullbright/logo.png"
 }
