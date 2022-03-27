@@ -18,17 +18,16 @@ buildscript {
 plugins {
     id 'de.undercouch.download' version '4.0.0'
 }
+
 apply plugin: 'net.minecraftforge.gradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.0.0'
-group = 'com.example' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'Example Addon'
+group = 'com.github.l3nnartt.fullbright'
+archivesBaseName = 'FullBright-1.16'
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 def mcpVersion = [channel: 'snapshot', version: '20201028-1.16.3']
 
@@ -92,7 +91,6 @@ dependencies {
 }
 
 jar {
-    // Excludes the start file
     exclude("**/launch")
 }
 
@@ -108,4 +106,3 @@ task downloadAPI(type: Download) {
     src "https://dl.labymod.net/latest/api/files/lm_api_mc1.16.5.jar"
     dest 'libs/'
 }
-
