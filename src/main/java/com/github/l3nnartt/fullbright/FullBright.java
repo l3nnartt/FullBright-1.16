@@ -8,17 +8,19 @@ import net.labymod.utils.Material;
 import net.minecraft.client.Minecraft;
 
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class FullBright extends LabyModAddon {
 
-    private final Logger LOGGER = Logger.getLogger("FullBright");
+    private static final Logger LOGGER = Logger.getLogger("FullBright");
     private final String PREFIX = "[FullBright-1.16] ";
     private boolean enabled;
 
     @Override
     public void onEnable() {
-        LOGGER.info("Addon successful activated");
+        LOGGER.getParent().getHandlers()[0].setLevel(Level.ALL);
+        LOGGER.log(Level.INFO, PREFIX + "Addon successful activated");
     }
 
     @Override
