@@ -8,14 +8,17 @@ import net.labymod.utils.Material;
 import net.minecraft.client.Minecraft;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class FullBright extends LabyModAddon {
 
+    private final Logger LOGGER = Logger.getLogger("FullBright");
+    private final String PREFIX = "[FullBright-1.16] ";
     private boolean enabled;
 
     @Override
     public void onEnable() {
-        getLogger("Addon started");
+        LOGGER.info("Addon successful activated");
     }
 
     @Override
@@ -40,9 +43,5 @@ public class FullBright extends LabyModAddon {
 
     public void changeGama(double gamma) {
         Minecraft.getInstance().gameSettings.gamma = gamma;
-    }
-
-    public static void getLogger(String log) {
-        System.out.println("[FullBright-1.16] " + log);
     }
 }
